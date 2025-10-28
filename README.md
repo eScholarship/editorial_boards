@@ -1,7 +1,8 @@
 # Editorial Board Memberships
 
-[Install pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation) and [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
-Install python 3.14 and create virtualenv
+- [Install pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
+- [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv)
+- Install python 3.14 and create virtualenv
 ```
 pyenv install 3.14.0
 pyenv virtualenv 3.14.0 ed-board-venv
