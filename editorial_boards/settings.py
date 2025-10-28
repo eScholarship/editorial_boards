@@ -24,7 +24,7 @@ env.read_env(str(BASE_DIR / ".env"))
 # In development set environment variable DEBUG=True
 DEBUG = env.bool("DEBUG", False)
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-+87)d_71kkuj3slsxe1su+nz%sc6ybo+5$u9k(13iyou3ee%s!')
+SECRET_KEY = env('SECRET_KEY', default='django-insecure-+87)d_71kkuj3slsxe1su+nz%sc6ybo+5$u9k(13iyou3ee%s!')
 
 ALLOWED_HOSTS = []
 
@@ -120,6 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
