@@ -43,10 +43,26 @@ class Issue(models.Model):
 
 class EditorialBoardMember(models.Model):
     ROLES = [
+        ('Executive Editor', 'Executive Editor'),
         ('Editor-in-Chief', 'Editor-in-Chief'),
+        ('Co-Editor-in-Chief', 'Co-Editor-in-Chief'),
+        ('Senior Editor', 'Senior Editor'),
         ('Associate Editor', 'Associate Editor'),
+        ('Managing Editor', 'Managing Editor'),
+        ('Handling Editor', 'Handling Editor'),
+        ('Section Editor', 'Section Editor'),
+        ('Review Editor', 'Review Editor'),
+        ('Editorial Assistant', 'Editorial Assistant'),
+        ('Editor', 'Editor'),
         ('Editorial Board Member', 'Editorial Board Member'),
-        ('Guest Editor', 'Guest Editor'),
+        ('Advisory Board Member', 'Advisory Board Member'),
+        ('Advisory Editor', 'Advisory Editor'),
+        ('Honorary Editor', 'Honorary Editor'),
+        ('Designer / Production Editor', 'Designer / Production Editor'),
+        ('Writer', 'Writer'),
+        ('Copyeditor', 'Copyeditor'),
+        ('Publicity Editor', 'Publicity Editor'),
+        ('Advisor', 'Advisor'),
     ]
     issue = models.ForeignKey(Issue, on_delete=models.CASCADE)
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
