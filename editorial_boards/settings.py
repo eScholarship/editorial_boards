@@ -27,6 +27,8 @@ DEBUG = env.bool("DEBUG", False)
 SECRET_KEY = env('SECRET_KEY', default='django-insecure-+87)d_71kkuj3slsxe1su+nz%sc6ybo+5$u9k(13iyou3ee%s!')
 
 ALLOWED_HOSTS = []
+if 'HOST_URL' in env:
+    ALLOWED_HOSTS = [env('HOST_URL')]
 
 if not DEBUG and SECRET_KEY.startswith('django-insecure-'):
     print("******* Default SECRET_KEY should NEVER be used in production **********")
