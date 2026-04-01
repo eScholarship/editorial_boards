@@ -11,7 +11,7 @@ class Journal(models.Model):
 class Person(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    email = models.EmailField(unique=True, blank=True)
+    email = models.EmailField(blank=True)
     orcid = models.CharField(max_length=19, blank=True, null=True)
     has_janeway_account = models.BooleanField(default=False)
 
