@@ -20,7 +20,7 @@ class Person(models.Model):
     
 class Institution(models.Model):
     name = models.CharField(max_length=255)
-    ror_id = models.CharField(max_length=20, unique=True, blank=True)
+    ror_id = models.CharField(max_length=50, blank=True)
     city = models.CharField(max_length=100, blank=True)
     country = models.CharField(max_length=100, blank=True)
     is_uc = models.BooleanField(default=False)
